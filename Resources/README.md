@@ -8,7 +8,7 @@ Koans is an interactive tutorial for learning the programming language by making
 
 In order to initialize your koans directory, run the following commands:
 
-"""
+```
 git submodule init
 git submodule update
-"""
+```
