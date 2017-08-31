@@ -1,9 +1,3 @@
-[submodule "Python_Koans"]
-	path = Resources/Koans/Python_Koans
-	url = https://github.com/gregmalcolm/python_koans.git
-[submodule "python_koans"]
-	path = python_koans
-	url = https://github.com/gregmalcolm/python_koans.git
 [submodule "Resources/Koans/python_koans"]
 	path = Resources/Koans/python_koans
 	url = https://github.com/gregmalcolm/python_koans.git
