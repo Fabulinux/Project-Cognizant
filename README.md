@@ -5,4 +5,4 @@ This is a place for people to learn!
 Name   | Score
 -------|------
 Brian  | 0
-Kevin  | 1
+Kevin  | 2
