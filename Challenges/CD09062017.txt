@@ -1,0 +1,11 @@
+B:
+
+I really like your solution as opposed to mine. We did the same thing basically. Mine is O(100(m+n)) and the way I preform my checks isn't as good.
+
+If I'm correct, your run time is going to be less than mine on average because you do the min/max check to find your range to run through.
+
+What I mostly like is your negative logic check. I do positive logic so it adds extra steps on when I've traversed the array and I set up ugly flags everywhere. Your negative logic check makes for cleaner and less code.
+
+Going to give you the point on this one!
+
+=============
