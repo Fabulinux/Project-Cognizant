@@ -23,13 +23,14 @@ function readLine() {
 function main() {
     var n = parseInt(readLine());
     var poundString = '#';
-    var spaces;
+    var spaces = ' ';
     var string;
     
     for(var i = 1; i<= n; i++){
+        // Clearing string for each row
         string = '';
-        spaces = ' ';
-
+        
+        // Spaces are how many steps - final amount, steps increase from 1 to amount
         string = string.concat(spaces.repeat((n-i)).concat(poundString.repeat(i)));
         console.log(string);
     }
