@@ -53,7 +53,6 @@ def circularArrayLoop(self, nums):
     return False
 
 if __name__ == "__main__":
-    n = int(raw_input().strip())
     nums = map(int, raw_input().strip().split(' '))
     results = circularArrayLoop(nums)
     print results
