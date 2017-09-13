@@ -20,16 +20,3 @@ Output format will be a list of the children of the inputted node and the node i
 Example input: (B, treeList)
 
 Example outout: [B, D, E, G]
-
-def reverse(btree, p, acc):
-    for child,parent in btree:
-        if parent == p and p not in acc:
-            acc += child
-            return reverse(btree, child, acc)
-
-    if p not in acc:
-        return acc.append(p)
-    else:
-        return acc
-
-print reverse(tree, 'B', [])
