@@ -1,0 +1,35 @@
+Given a list of pairs/2 element lists consisting of a representation of a tree (Not necessarily binary). The first element is the node while the second element is the parent.
+
+Example:
+
+[('A', None), ('B', 'A'), ('C', 'A'), ('D', 'B'), ('E', 'B'), ('F', 'C'), ('G', 'E')]
+
+Represents:
+
+        A
+       / \
+      B   C
+     / \   \
+    D   E   F
+       /
+      G
+
+Input format will be this list along with a Node in the tree. 
+Output format will be a list of the children of the inputted node and the node itself.
+
+Example input: (B, treeList)
+
+Example outout: [B, D, E, G]
+
+def reverse(btree, p, acc):
+    for child,parent in btree:
+        if parent == p and p not in acc:
+            acc += child
+            return reverse(btree, child, acc)
+
+    if p not in acc:
+        return acc.append(p)
+    else:
+        return acc
+
+print reverse(tree, 'B', [])

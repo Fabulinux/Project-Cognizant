@@ -20,51 +20,33 @@ function readLine() {
 
 /////////////// ignore above this line ////////////////////
 
-function getTotalX(a, b) {
-    var leftRange  = a.reduce(function(a, b) {
-    return Math.max(a, b);
-});;
-    var rightRange  = b.reduce(function(a, b) {
-    return Math.min(a, b);
-});;
-    var list = 0;
-    var check = true;
-    for(var i =leftRange; i<= rightRange; i++){
-        for(var j=0; j<a.length;j++){
-            if(i % a[j] !== 0){
-                check = false;
-            }
-            
+function migratoryBirds(n, ar) {
+    // Complete this function
+    let birdCount = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
+    let mostFrequentBird = 0;
+    let currentMaxBirdCount = 0;
+    
+    for (var i = 0; i<ar.length; i++){
+        birdCount[ar[i]]++;
+        
+        // if frequency of current bird is greater than current max update max count and bird
+        if(birdCount[ar[i]] > currentMaxBirdCount){
+            currentMaxBirdCount = birdCount[ar[i]];
+            mostFrequentBird = ar[i];
         }
-        for(var k=0;k<b.length;k++){
-            if(b[k] % i !== 0){
-                 check = false; 
-            }
-                
-        }
-                   
-                   
-        if(check){
-           list++;      
-        }
-        else{
-            check = true;
+        // if equal, get the smaller bird, no need to update currentMaxBirdCount
+        else if(birdCount[ar[i]] === currentMaxBirdCount){
+            mostFrequentBird = (ar[i] < mostFrequentBird) ? ar[i] : mostFrequentBird;
         }
     }
-    return list;
+    return mostFrequentBird;
 }
 
-
-
 function main() {
-    var n_temp = readLine().split(' ');
-    var n = parseInt(n_temp[0]);
-    var m = parseInt(n_temp[1]);
-    a = readLine().split(' ');
-    a = a.map(Number);
-    b = readLine().split(' ');
-    b = b.map(Number);
-    var total = getTotalX(a, b);
-    process.stdout.write("" + total + "\n");
+    var n = parseInt(readLine());
+    ar = readLine().split(' ');
+    ar = ar.map(Number);
+    var result = migratoryBirds(n, ar);
+    process.stdout.write("" + result + "\n");
 
 }
