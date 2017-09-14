@@ -1,12 +1,17 @@
 def reverse(btree, p, acc):
+    tmp = btree
     for child,parent in btree:
-        if parent == p and p not in acc:
-            acc += child
-            return reverse(btree, child, acc)
+        if parent == None:
+            continue
+        tmp = tmp[1:]
+        if parent == p and child not in acc:
+            acc.add(child)
+            acc.union(reverse(tmp, child, acc))
 
-    if p not in acc:
-        return acc.append(p)
-    else:
-        return acc
+    acc.add(p)
+    return acc
 
-print reverse(tree, 'B', [])
+tree = [('A', None), ('B', 'A'), ('C', 'A'), ('D', 'B'), ('E', 'B'), ('F', 'C'), ('G', 'E')]
+
+acc = set([])
+print list(reverse(tree, 'A', acc))
