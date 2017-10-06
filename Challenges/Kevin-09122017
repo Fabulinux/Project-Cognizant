@@ -1,0 +1,39 @@
+// DOESNT WORK
+// supposed to emulate BFS
+var treeList = [['A', 'None'], ['B', 'A'], ['C', 'A'], ['D', 'B'], ['E', 'B'], ['F', 'C'], ['G', 'E']];
+
+var parentNode = 'B';
+function findSubTree(parentNode,treeList) {
+
+  // initialize a map with empty lists to hold children
+  var map = {};
+  for (let i = 0; i < treeList[0].length; i++) {
+    var val = (treeList[i])[1];
+    map.val = [];
+  }
+
+  // each parent node gets their children list appended with children
+  for (let i = 0; i < treeList[0].length; i++) {
+    var val = (treeList[i])[1];
+    map.val.push((treeList[i])[0]);
+  }
+  var currentStack = [];
+  currentStack.push(parentNode);
+
+  // pushing current stack with current node ( start with parent)
+  // then use the map to get the children list, set the children to be parent then push
+  // children node of that
+  // Once at the bottom or undefined then start popping
+  while (currentStack.length > 0) {
+    var currentVal = currentStack[currentStack.length - 1];
+    var currentNode = map.currentVal;
+    if ((typeof currentNode === undefined)) {
+      var print = currentStack.pop();
+    } else {
+      for (let i = 0; i < map.currentNode.length; i++) {
+        currentStack.push(map.currentNode[i]);
+      }
+    }
+  }
+}
+
