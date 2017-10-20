@@ -8,3 +8,4 @@ Date Submitted | Due Date     | Submitter | Platform    | Link
 09/08/2017     | 09/12/2017   | Kevin     | LeetCode    | [Link](https://leetcode.com/problems/circular-array-loop/description/)
 09/12/2017     | 09/15/2017   | Brian     | Personal    | [Link](https://github.com/Fabulinux/Project-Cognizant/blob/master/Challenges/PersonalSubmissions/Challenge-09122017.txt)
 10/19/2017     |              |Kevin      | HackerRank  | [Link](https://www.hackerrank.com/challenges/fibonacci-modified/problem)
+10/20/2017     |              |Kevin      | HackerRank  | [Link](https://www.hackerrank.com/challenges/equal/problem)
